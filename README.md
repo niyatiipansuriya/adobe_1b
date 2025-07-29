@@ -106,8 +106,9 @@ NLTK data to src/nltk_data/
 
 main.py will load from local folders.
 
-📤 Output Format
+### 📤 Output Format
 
+```json
 {
   "metadata": {
     "input_documents": [...],
@@ -115,7 +116,7 @@ main.py will load from local folders.
     "job_to_be_done": "...",
     "processing_timestamp": "..."
   },
-  "extracted_sections": [
+  "extracted_sections"
     {
       "document": "doc1.pdf",
       "page_number": 3,
@@ -131,7 +132,8 @@ main.py will load from local folders.
     }
   ]
 }
-🧪 Sample Run (Without Docker)
+```
+Sample Run (Without Docker)
 ```
 python src/main.py input.json
 ```
