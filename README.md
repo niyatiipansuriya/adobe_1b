@@ -56,16 +56,16 @@ Listed in `requirements.txt`:
 
 ### 1. **Build the Docker Image**
 
-bash
+```
 docker build -t pdf-heading-extractor .
-2. Prepare Input
+```
+
+### 2. **Prepare Input**
 Place all your .pdf files in the PDFs/ folder.
 
 Fill input.json with the format:
 
-json
-Copy
-Edit
+```
 {
   "challenge_info": {
     "description": "Analyze educational documents for hiring"
@@ -81,11 +81,13 @@ Edit
     { "filename": "doc2.pdf" }
   ]
 }
+```
+
 3. Run the Container
-bash
-Copy
-Edit
+
+```
 docker run --rm -v "$(pwd)/PDFs:/app/PDFs" -v "$(pwd)/input.json:/app/input.json" -v "$(pwd)/output:/app/output" pdf-heading-extractor
+```
 ✅ The output will be saved as challenge1b_output.json in the output/ folder.
 
 🔄 Offline Mode
@@ -94,11 +96,9 @@ To avoid redownloading models every time:
 Run:
 
 ```
-Copy
-Edit
 python src/download_assets.py
-This downloads:
 ```
+This downloads:
 
 SentenceTransformer model to src/models/
 
@@ -107,9 +107,7 @@ NLTK data to src/nltk_data/
 main.py will load from local folders.
 
 📤 Output Format
-json
-Copy
-Edit
+
 {
   "metadata": {
     "input_documents": [...],
@@ -135,7 +133,5 @@ Edit
 }
 🧪 Sample Run (Without Docker)
 ```
-Copy
-Edit
 python src/main.py input.json
 ```
