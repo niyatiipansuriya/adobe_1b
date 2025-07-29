@@ -39,26 +39,6 @@ A robust NLP-powered pipeline to extract, rank, and summarize key sections and s
 
 ---
 
-## 📁 Project Structure
-
-adobe__1B/
-├── PDFs/ # Place input PDFs here
-├── src/
-│ ├── models/ # SentenceTransformer model
-│ ├── nltk_data/ # Offline NLTK assets
-│ ├── download_assets.py # Script to download models & data
-│ └── main.py # Main script to run the pipeline
-├── input.json # Input config with persona & job
-├── requirements.txt # Python dependencies
-├── Dockerfile # Docker container definition
-├── .dockerignore
-└── README.md # This file
-
-yaml
-Copy
-Edit
-
----
 
 ## 📦 Dependencies
 
